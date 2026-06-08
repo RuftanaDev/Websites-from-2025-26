@@ -1,0 +1,30 @@
+body{
+    background-color: black;
+    max-height: 100vh;
+}
+#down{
+    position: absolute;
+    top:5%;
+    left:50%;
+    transform: translate(-50%);
+    width: 700px;
+}
+.point{
+    position: absolute;
+}
+.one{
+    top:43%;
+    left: 40%;
+}
+.two{
+    top:30%;
+    left: 50%;
+}
+.three{
+    top:35%;
+    left: 40%;
+}
+.four{
+    top:40%;
+    left: 45%;
+}

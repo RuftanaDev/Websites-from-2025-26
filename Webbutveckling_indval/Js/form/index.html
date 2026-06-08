@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title><style>
+        #Container{
+    display: none;
+}
+    </style>
+    
+</head>
+<body>
+    <noscript>
+        <div id="nojs" style = " color:red; font-weight: bold;">Javascript is disabled in your brownser.</div>
+    </noscript>
+    <div id="Container">
+        <form>
+            <label for="epost">Epost</label>
+            <input type="email" name="username" id="epost" placeholder="Andrew@kfvelev.se" required>
+            <hr>
+            <label for="yourfirstname">Förnamn</label>
+            <input type="text" name="förnamn" id="yourfirstname" placeholder="Andrew" required>
+            <hr>
+            <label for="yoursecondname">Efternamn</label>
+            <input type="text" name="efternamn" id="yoursecondname" placeholder="Petersson" required>
+            <hr>
+            <label for="yourage">Ålder</label>
+            <input type="number" name="age" id="yourage" placeholder="28" required>
+            <hr>
+            <p>Jobbar du inom privat eller offentligsektor</p>
+            <input type="radio" name="username" id="Privat" value="Privat">
+            <label for="Privat">Privat</label>
+            <input type="radio" name="username" id="Offentlig" value="Offentlig">
+            <label for="Offentlig">Offentlig</label>
+            <hr>
+            <p>Vad är du interesserade av?</p>
+            <input type="checkbox" name="username" id="Bilar" value="bilar">
+            <label for="Bilar">Bilar</label>
+            <input type="checkbox" name="username" id="Fotboll" value="Fotboll">
+            <label for="Fotboll">Fotboll</label>
+            <input type="checkbox" name="username" id="Gymnastik" value="Gymnastik">
+            <label for="Gymnastik">Gymnastik</label>
+            <input type="checkbox" name="username" id="Hästsport" value="Hästsport">
+            <label for="Hästsport">Hästsport</label>
+            <input type="checkbox" name="username" id="Handboll" value="Handboll">
+            <label for="Handboll">Handboll</label>
+            <hr>
+            <button id="submit">Submit</button>
+            <div id="svar">
+                <p id="svarpåmejl"></p>
+                <p id="svarpåförnamn"></p>
+                <p id="svarpåefternamn"></p>
+                <p id="svarpåålder"></p>
+                <p id="svaromprivatjobb"></p>
+                <p id="svaromoffentilgtjobb"></p>
+                <p id="svaromhobby1"></p>
+                <p id="svaromhobby2"></p>
+                <p id="svaromhobby3"></p>
+                <p id="svaromhobby4"></p>
+                <p id="svaromhobby5"></p>
+            </div>
+            <div id="shiningcolors">
+                <label>Choose a background color:</label>
+                <input type="color" name="color" id="color" value="#fffff1">
+            </div>
+        
+        </form>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="js/form.js"></script>
+    </div>
+</body>
+</html>

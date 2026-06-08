@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="window">
+        <div id="slider">
+
+            <div class="slide">
+                <img src="img/firstthunder.jpg" alt="Åskbild 1">
+                <div class="SlideCaption">
+                    <p>Slide 1 – åskstorm över havet</p>
+                    <p>Fotodatum: DD/MM/YY</p>
+                </div>
+            </div>
+
+            <div class="slide">
+                <img src="img/lastthunder.jpg" alt="Åskbild 2">
+                <div class="SlideCaption">
+                    <p>Slide 2 – bilden är hämtad från internet</p>
+                    <p>Fotodatum: DD/MM/YY</p>
+                </div>
+            </div>
+
+            <div class="slide">
+                <img src="img/secondthunder.jpg" alt="Åskbild 3">
+                <div class="SlideCaption">
+                    <p>Slide 3 – nattlig åska</p>
+                    <p>Fotodatum: DD/MM/YY</p>
+                </div>
+            </div>
+
+            <div class="slide">
+                <img src="img/lastthunder.jpg" alt="Åskbild 4">
+                <div class="SlideCaption">
+                    <p>Slide 4 – sista bilden i serien</p>
+                    <p>Fotodatum: DD/MM/YY</p>
+                </div>
+            </div>
+
+        </div><!-- #slider -->
+    </div><!-- #window -->
+
+    <!-- PRICK-INDIKATOR (skapas/visas av JS) -->
+    <div id="dots"></div>
+
+    <!-- KNAPPAR -->
+    <div id="buttonstoclick">
+        <button id="Back">&#8592; Back</button>
+        <button id="Stop">Pause</button>
+        <button id="next">Next &#8594;</button>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="js/slider.js"></script>
+</body>
+</html>

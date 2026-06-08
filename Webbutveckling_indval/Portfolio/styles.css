@@ -1,0 +1,583 @@
+body{
+    min-height: 100vh;
+    }
+
+a:hover{
+    color: rgb(255, 0, 0);
+}
+h1{
+    margin:0px;
+    padding: 0px;
+}
+p{
+    font-size: 20px;
+} 
+.foldit-amanda {
+  font-family: "Foldit", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 170px;
+}
+#foldit-amanda1 {
+  font-family: "Foldit", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 70px;
+  grid-area: KONTAKTMIG;
+}
+#nabla-paraintro {
+  font-weight: 400;
+  font-style: normal;
+  font-size: 40px;
+}
+.poppins-medium-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+  font-size: 35px;
+}
+.inter-paragraph {
+  font-family: "Inter", sans-serif;
+  font-weight: normal ;
+  font-style: normal;
+}
+#kontakta{
+    background-color:rgba(238, 238, 238, 0.7);
+    grid-area: kontakta;
+    width: 100%;
+    height:auto;
+    min-height: 40px;
+    border: 2px solid;
+    display: grid;
+    grid-template-columns: 10% 75% 5% 10%;
+    grid-template-rows: 30% 30% 30% 10%;
+    grid-template-areas:
+    ". namn namn ."
+    ". epost epost ." 
+    ". Meddelandes Meddelandes ."
+    ". .  skicka skicka";
+} 
+#gridone{
+    height:100%;
+    display: grid;
+    grid-template-columns: 10% 64% 20% 6%;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
+    "header header header header"
+    "main main main main"
+    "aside aside aside aside"
+    "footer footer footer footer" ;
+}
+header{
+    background-color: transparent;
+    grid-area: header;
+    position: sticky;
+    top:10px;
+}
+#navbar{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100%;
+    grid-template-areas: 
+    "logoimage  navlinks";
+}
+#navbar  img {
+    grid-area: logoimage;
+    height: 60px;
+    width:300px;
+}
+#OMmigavlink{
+    grid-area: OMmigavlink;
+}
+#Erfarenheteravlink{
+    grid-area: Erfarenheteravlink;
+}
+#Kontaktavlink{
+    grid-area: Kontaktavlink;
+}
+#navbar > ul {
+    grid-area: navlinks;
+    column-gap:50px ;
+    display: grid;
+    grid-template-columns:30% 31% 39%;
+    grid-template-rows: 100%;
+    grid-template-areas: 
+    "OMmigavlink Erfarenheteravlink Kontaktavlink";
+    
+}
+#navbar > ul > li{
+    font-size: 25px;
+}
+main{
+    width: 100%;
+    min-height:auto;
+    display: grid;
+    grid-template-columns: 33% 29% 4% 34%;
+    grid-template-rows: 10% 12% 15% 21% 21% 21%;
+    grid-template-areas: 
+    "Hello Hello Bild  Bild"
+    "OMmig OMmig OMmig OMmig"
+    "Erfarenhet Erfarenhet Erfarenhet Erfarenhet"
+    "fard fard fard fard"
+    "Certifikat Certifikat Certifikat Certifikat"
+    "projket projket projket projket";
+    grid-area: main;
+}
+aside{
+    
+    min-height: 600px;
+    grid-area: aside;
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    grid-template-rows: 20% 10% 70%;
+    grid-template-areas: 
+    ". KONTAKTMIG ."
+    ". asidetext asidetext"
+    ". kontakta .";
+}
+footer{
+    grid-area: footer;
+    height:50px;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: 100%;
+    grid-template-areas:
+    "logolinks paragraph" 
+    ;
+}
+#HelloWorld{
+    grid-area: Hello;
+}
+#portfoliobild{
+    grid-area: Bild;
+    border: 5px solid;
+    border-radius: 50%;
+    width: 250px;
+    height: 300px;
+}
+#portfoliobild img{
+    width: 250px;
+    height: 300px;
+    border-radius: 50%;
+}
+#Fardigheter{
+    max-height: 600px;
+    grid-area: fard;
+    display: grid;
+    grid-template-columns: 40% 10% 5% 45% ;
+    grid-template-rows: 20% 80%;
+    grid-template-areas:
+    ".  fardigheterh1 fardigheterh1 fardigheterh1 "
+    "fardigheterleft fardigheterleft fardigheterleft  fardigheterright" ;
+}
+#Erfarenhet{
+    grid-area: Erfarenhet;
+    display: grid;
+    grid-template-columns: 40% 8% 17% 35%;
+    grid-template-rows: 23% 7% 70%;
+    grid-template-areas: 
+    ". Erfarenheter Erfarenheter . "
+    ". . resume ."
+    "place place place place";
+}
+#OMmig{
+        grid-area: OMmig;
+        display: grid;
+        grid-template-columns: 40% 20% 40%;
+        grid-template-rows:  25% 25% 46%;
+        grid-template-areas:
+        ". ommigheader ."
+        "ommigparagraph1 ommigparagraph1 ommigparagraph1 "
+        "ommigparagraph2 ommigparagraph2 ommigparagraph2"
+       ; 
+}
+#Certifikat{
+    grid-area: Certifikat;
+    display: grid;
+    grid-template-columns: 25% 25%  25% 25%;
+    grid-template-rows: 8% 43.5% 43.5%;
+    grid-template-areas:
+    ". Certifikath2 Certifikath2 ." 
+    "Certifikat3 Certifikat3 Certifikat2 Certifikat2 "
+    "Certifikat1 Certifikat1  Certifikat1 Certifikat1";
+}
+#Projekt{
+    grid-area: projket;
+    display: grid;
+    grid-template-columns: 25% 25%  25% 25%;
+    grid-template-rows: 8% 43.5% 43.5%;
+    grid-template-areas:
+    ". . Projektfirstsection ." 
+    "Projektp3 Projektp3 Projektp2 Projektp2 "
+    "Projektp1 Projektp1 Projektp1 Projektp1" ;
+}
+#Projektfirstsection{
+    grid-area: Projektfirstsection;
+}
+.cards{
+    width:100%;
+    height:100%; 
+    display: grid;
+    grid-template-columns: 30% 40% 30%;
+    grid-template-rows: 20% 40% 40%;
+    row-gap: 10px; 
+}
+#Projektp1{
+    grid-area: Projektp1;
+    grid-template-areas: 
+    ". h3avProjektp1 ."
+    ". imgavProjektp1 imgavProjektp1"
+    "pavProjektp1 pavProjektp1 pavProjektp1";    
+}
+#Projektp1 > h3{
+    grid-area: h3avProjektp1;
+}
+#Projektp1 > img{
+    grid-area: imgavProjektp1;
+}
+#Projektp1 > p{
+    grid-area: pavProjektp1;
+}
+#Projektp2{
+    grid-area: Projektp2;
+    grid-template-areas: 
+    ". h3avProjektp2 ."
+    ". imgavProjektp2 imgavProjektp2"
+    "pavProjektp2 pavProjektp2 pavProjektp2"; 
+}
+#Projektp2 > h3{
+    grid-area: h3avProjektp2;
+}
+#Projektp2 > img{
+    grid-area: imgavProjektp2;
+}
+#Projektp2 > p{
+    grid-area: pavProjektp2;
+}
+#Projektp3{
+    grid-area: Projektp3;
+    grid-template-areas: 
+    ". h3avProjektp3 ."
+    ". imgavProjektp3 imgavProjektp3"
+    "pavProjektp3 pavProjektp3 pavProjektp3";    
+}
+#Projektp3 > h3{
+    grid-area: h3avProjektp3;
+}
+#Projektp3 > img{
+    grid-area: imgavProjektp3;
+}
+#Projektp3 > p{
+    grid-area: pavProjektp3;
+}
+#Projektp4{
+    grid-area: Projektp4;
+    grid-template-areas: 
+    ". h3avProjektp4 ."
+    ". imgavProjektp4 imgavProjektp4"
+    "pavProjektp4 pavProjektp4 pavProjektp4";     
+}
+#Projektp4 > h3{
+    grid-area: h3avProjektp4;
+}
+#Projektp4 > img{
+    grid-area: imgavProjektp4;
+}
+#Projektp4 > p{
+    grid-area: pavProjektp4;
+}
+#Certifikat1{
+    grid-area: Certifikat1;
+    grid-template-areas: 
+    ". h3avCertifikat1 ."
+    ". imgavCertifikat1 imgavCertifikat1"
+    "pavCertifikat1 pavCertifikat1 pavCertifikat1";
+}
+#Certifikat1 > h3{
+    grid-area: h3avCertifikat1;
+}
+#Certifikat1 > img{
+    grid-area: imgavCertifikat1;
+}
+#Certifikat1 > p{
+    grid-area: pavCertifikat1;
+}
+
+#Certifikat2{
+    grid-area: Certifikat2;
+    grid-template-areas: 
+    ". h3avCertifikat2 ."
+    ". imgavCertifikat2 imgavCertifikat2 "
+    "pavCertifikat2 pavCertifikat2 pavCertifikat2";
+}
+#Certifikat2 > h3{
+    grid-area: h3avCertifikat2;
+}
+#Certifikat2 > img{
+    grid-area: imgavCertifikat2;
+}
+#Certifikat2 > p{
+    grid-area: pavCertifikat2;
+}
+#Certifikat3{
+    grid-area: Certifikat3;
+    grid-template-areas: 
+    ". h3avCertifikat3 ."
+    ". imgavCertifikat3 imgavCertifikat3"
+    "pavCertifikat3 pavCertifikat3 pavCertifikat3";
+}
+#Certifikat3 > h3{
+    grid-area: h3avCertifikat3;
+}
+#Certifikat3 > img{
+    grid-area: imgavCertifikat3;
+}
+#Certifikat3 > p{
+    grid-area: pavCertifikat3;
+}
+#Certifikat4{
+    margin-top: 20px;
+    grid-area: Certifikat4;
+    grid-template-areas: 
+    ". h3avCertifikat4 ."
+    ". imgavCertifikat4 imgavCertifikat4"
+    "pavCertifikat4 pavCertifikat4 pavCertifikat4";
+}
+#Certifikat4 > h3{
+    grid-area: h3avCertifikat4;
+}
+#Certifikat4 > img{
+    grid-area: imgavCertifikat4;
+}
+#Certifikat4 > p{
+    grid-area: pavCertifikat4;
+}
+#Certifikath2{
+    grid-area: Certifikath2;
+}
+.imgofcertifkathdiv1{
+    height: 150px;
+    width:auto;
+}
+#ommigheader1{
+    grid-area: ommigheader;
+}
+#ommigparagraph1{
+    grid-area: ommigparagraph1;
+}
+#ommigparagraph2{
+    grid-area: ommigparagraph2;
+}
+#Erfarenheter{
+    grid-area: Erfarenheter;
+}
+#resume{
+    grid-area: resume;
+}
+#placeholder{
+    grid-area: place;
+}
+#asidetext{
+    grid-area: asidetext;
+}
+#namns{
+    grid-area: namn ;
+    border:2px solid;
+}
+#eposts{
+    grid-area: epost;
+    border:2px solid;
+}
+#Meddelandes{
+    grid-area: Meddelandes ;
+    border:2px solid;
+}
+#skicka{
+    grid-area: skicka ;
+    min-height: 20px;
+    max-height: 30px;
+}
+#fardigheterh2{
+    grid-area:fardigheterh1 ;
+}
+#fardigheterleft{
+    grid-area: fardigheterleft;
+}
+#fardigheterright{
+    grid-area: fardigheterright;
+}
+
+#logolinks{
+    grid-area: logolinks;
+}
+footer > p{
+    grid-area: paragraph;
+}
+.ikon {
+    background-image: url("images/css_sprites_.webp");
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display:inline-block;
+}
+.hackerrank{
+    background-position: 0 0;
+}
+.github{
+    background-position: -40px 0;
+}
+@media (max-width:400px){
+    body{
+        width: 100vw;
+    }
+    #kontakta{
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "namn"
+        "epost"
+        "Meddelandes"
+        "skicka"; 
+        width: 90%;
+    } 
+    #Projekt{
+        grid-template-columns: 30% 70%;
+        grid-template-rows: 10% 30% 30% 30%;
+        grid-template-areas:
+        ". Projektfirstsection" 
+        "Projektp1 Projektp1"
+        "Projektp2 Projektp2 "
+        "Projektp3 Projektp3";
+        margin-top: 70px;
+        
+        row-gap: 40px;
+    }
+    #Certifikat{
+        grid-template-columns: 30% 70%;
+        grid-template-rows: 10% 30% 30% 30% ;
+        grid-template-areas:
+        "Certifikath2 Certifikath2" 
+        "Certifikat1 Certifikat1 "
+        "Certifikat2 Certifikat2"
+        "Certifikat3 Certifikat3";
+        row-gap: 40px;
+        margin-top: 400px;
+    }
+    #nabla-paraintro {
+        font-size: 30px;
+    }     
+    #navbar{
+        grid-template-columns: 100%;
+        grid-template-areas: 
+        "logoimage ";
+    }
+    header{
+        background-color:transparent;
+    }
+    #navbar  img {
+        grid-area: logoimage;
+        height: 30px;
+        width:150px;
+    }
+    #portfoliobild{
+        grid-area: Bild;
+        border: 5px solid;
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+    }
+    #portfoliobild img{
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+    }
+    .foldit-amanda {
+        font-size: 40px;
+    }
+    #navbar > ul {
+        display: none;
+    }
+    #gridone{
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto auto auto ;
+        grid-template-areas:
+       "header"
+        "main"
+        "aside "
+        "footer" ;
+    }
+    main{
+        grid-template-columns: 50% 50% ;
+        grid-template-rows: 6% 10% 14% 20% 30% 20%;
+        grid-template-areas: 
+        "Hello   Bild"
+        "OMmig  OMmig"
+        "Erfarenhet  Erfarenhet"
+        "fard fard"
+        "Certifikat  Certifikat"
+        "projket  projket";
+        width: 90%;
+    }
+    #OMmig{
+        grid-area: OMmig;
+        display: grid;
+        grid-template-columns: 30% 30% 40%;
+        grid-template-rows:  13% 27% 56%;
+        grid-template-areas:
+        ". ommigheader ommigheader"
+        "ommigparagraph1 ommigparagraph1 ommigparagraph1 "
+        "ommigparagraph2 ommigparagraph2 ommigparagraph2"
+        ;
+        row-gap: 100px;
+    }
+    #Fardigheter{
+    height: auto;
+    grid-template-columns: 30% 70% ;
+    grid-template-rows: 5% 85% 10%;
+    grid-template-areas:
+    ".  fardigheterh1 "
+    "fardigheterleft fardigheterleft" 
+    " fardigheterright fardigheterright";
+    row-gap: 220px;
+    margin-bottom:50px ;
+    margin-top: 70px;
+    
+    }   
+    #Erfarenhet{
+        grid-template-columns: 30% 70%;
+        grid-template-rows: 13% 7% 80%;
+        grid-template-areas: 
+        ". Erfarenheter "
+        ". resume"
+        "place place";
+        margin-top: 120px;
+    }
+    footer{
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 100%;
+    grid-template-areas:
+    "logolinks paragraph";
+    width: 90%;
+    }
+    aside{
+        
+        margin: 100px 0 100px 0 ;
+        min-height: 600px;
+        grid-area: aside;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 20% 10% 70%;
+        grid-template-areas: 
+        " KONTAKTMIG "
+        " asidetext "
+        "kontakta ";
+        row-gap: 60px;
+        padding-bottom: 30px;
+        width: 90%;
+    }
+    footer > p{
+        font-size: small;
+    }
+    .cards{
+    row-gap: 20px;
+}
+}

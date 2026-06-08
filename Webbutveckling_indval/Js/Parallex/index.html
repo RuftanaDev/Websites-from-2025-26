@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallex</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <img id="down" src="images/downontheknees.png " >
+    <img class="point one" src="images/anxiety.png">
+    <img class="point two" src="images/depression.png">
+    <img class="point three" src="images/worry.png">
+    <img class="point four" src="images/stress.png">
+    <canvas id="canvas"> </canvas>
+
+    <script>
+        let x=100;
+        let y=100;
+        let r=10;
+        let yspeed=1;
+        let xspeed=0;
+        let g =0.01;
+        let vinkel=0;
+        let particles =[];
+        let h=window.innerHeight * 1.9;
+        let w=window.innerWidth * 1.1;
+        let antal = 1000;
+
+
+        for(let i =0; i<antal; i++){
+
+        particles.push({
+            x:Math.random()*w, 
+            y:Math.random()*h,
+            r:Math.random()*7
+        });
+    }
+    let canvas=document.getElementById("canvas");
+    let ctx=canvas.getContext("2d");
+
+    
+    //console.log(h+" "+w);
+
+    canvas.height=h;
+    canvas.width=w;
+
+    function draw(){
+        
+        ctx.fillStyle="rgba(255,255,255,0.8)"; // sätter färg på pennan
+        ctx.clearRect(0,0,w,h);
+
+        for(let i =0; i<antal; i++){
+        particle =particles[i];
+        ctx.beginPath();  // börja rita
+        ctx.moveTo(particle.x,particle.y);
+        ctx.arc(particle.x,particle.y,particle.r,0,2*Math.PI);
+        ctx.fill();
+        }
+    }
+
+    draw();
+
+
+    function update(){
+
+        vinkel=vinkel+2;
+        yspeed=yspeed+g*Math.sin(vinkel*Math.PI/180);
+
+        for(let i=0;i<antal;i++){
+
+            let particle= particles[i];
+            particle.y=particle.y+yspeed;
+
+            particle.x = particle.x+Math.cos(vinkel *Math.PI/180)*2 
+
+            if(i%3==0){
+                particle.x = particle.x+Math.cos(vinkel *Math.PI/180)*5
+                particle.y=particle.y+yspeed-1;
+            }
+            if (h < particle.y) {
+            
+                particle.y = 0;
+                yspeed = 1;
+                 
+            }
+        }
+
+        //console.log(yspeed);
+        draw();
+
+    }
+
+    setInterval(update,30);
+
+        const down = document.querySelector('#down');
+        const point = document.querySelectorAll('.point')
+        window.addEventListener('scroll', (e)=>{
+            let scrolled = window.scrollY;
+            console.log(scrolled);
+
+            let rate = scrolled * -0.7;
+           let rateTwo;
+           if(scrolled<500){
+        
+              rateTwo= scrolled * 1.5;
+        }
+            down.style.transform = `translate(-50%, ${rateTwo}px)`
+
+            point.forEach(quote=>{
+                quote.style.transform = ` translate(${rate}px)`
+                quote.style.opacity = (1-scrolled/100);
+
+            })
+
+        })
+    </script>
+</body>
+</html>

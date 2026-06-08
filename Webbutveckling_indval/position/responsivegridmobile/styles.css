@@ -1,0 +1,90 @@
+body{
+    width: 100vw;
+    height:100vh;
+}
+
+header{
+    grid-area: h;
+    background-color:pink;
+}
+nav{
+    grid-area: n;
+    background-color: aquamarine;
+}
+main{
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-wrap: wrap;
+    /*grid-area: m;
+    grid-template-columns: 20% 25% 10% 25% 20% ;
+    grid-template-rows: 25% 25% 25% 25%;
+    grid-template-areas: 
+    "s s"
+    "s s"
+    "s s"
+    "s s";*/
+    background-color: beige;
+    justify-content: space-evenly;
+}
+.section{
+    width: 40px;
+    height:40px;
+    color:aqua;
+}
+#left{
+    grid-area: left;
+    background-color: bisque;
+
+}
+#right{
+    grid-area: right;
+    background-color: bisque;
+
+}
+footer{
+    grid-area: f;
+    background-color: darkgrey;
+}
+
+.grid{
+    margin-left: auto;
+    margin-right: auto;
+    height:100%;
+    width: 70%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 10% 5% 75% 5% 5%;
+    grid-template-areas: 
+        "h" 
+        "n"         
+        "m"
+        "left" 
+        "right"
+        "f";
+
+
+}
+@media screen and (max-width:800px){
+
+
+.grid{
+
+
+    grid-template-rows:10% 5% 50% 25% 5% 5%;
+     grid-template-areas: 
+        "h" 
+        "n" 
+        "m"
+        "left"
+        "right" 
+        "f";
+
+
+}
+
+
+
+
+
+}
